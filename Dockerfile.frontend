@@ -1,0 +1,6 @@
+FROM node:18-alpine
+WORKDIR /app
+COPY . .
+RUN cd frontend && npm install
+EXPOSE 3000
+CMD ["./scripts/start_frontend.sh"]
